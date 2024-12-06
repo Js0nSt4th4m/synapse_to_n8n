@@ -32,7 +32,7 @@ To check the lint:
 
 To build the Docker image: 
 
-	docker build -t your-bot:latest
+	docker build -t your-bot:latest .
 
 To run the Docker image (after building): 
 
