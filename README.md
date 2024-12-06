@@ -1,4 +1,4 @@
-# synapse_to_n8n
+# Synapse_to_n8n
 
 Based on [matrix-bot-sdk](https://github.com/turt2live/matrix-bot-sdk-bot-template), synapse_to_n8n allow you to connect synapse to n8n, you will be able to make a command bot.
 
