@@ -64,3 +64,47 @@ Example :
 	
 	// Ajouter l'url de votre webhook n8n
 	n8n_webhook_url: ""
+
+ # N8N Minimal WorkFlow
+
+ ![image](https://github.com/user-attachments/assets/b85f41a2-b014-45f6-900f-19cdbc5e0720)
+
+ Entry Point : WebHook node, it's where you will get the "n8n_webhook_url".
+
+ Edit Fields node : It's where you will parse the webhook body.
+
+ ![image](https://github.com/user-attachments/assets/943711f9-6b96-48ec-8ec6-3387260d3f44)
+
+ Exit Point : Matrix node, it's will be used to send the response to the synapse server
+
+# Get your access token 
+
+To retrieve your access token by Login :
+
+	import { MatrixAuth } from "matrix-bot-sdk";
+	
+	// This will be the URL where clients can reach your homeserver. Note that this might be different
+	// from where the web/chat interface is hosted. The server must support password registration without
+	// captcha or terms of service (public servers typically won't work).
+	const homeserverUrl = "https://example.org";
+	
+	const auth = new MatrixAuth(homeserverUrl);
+	const client = await auth.passwordLogin("username", "password");
+	
+	console.log("Copy this access token to your bot's config: ", client.accessToken);
+
+ To retrieve your access token by Registration :
+
+	 import { MatrixAuth } from "matrix-bot-sdk";
+	
+	// This will be the URL where clients can reach your homeserver. Note that this might be different
+	// from where the web/chat interface is hosted. The server must support password registration without
+	// captcha or terms of service (public servers typically won't work).
+	const homeserverUrl = "https://example.org";
+	
+	const auth = new MatrixAuth(homeserverUrl);
+	const client = await auth.passwordRegister("username", "password");
+	
+	console.log("Copy this access token to your bot's config: ", client.accessToken);
+
+ Regarding the [matrix_bot_sdk](https://turt2live.github.io/matrix-bot-sdk/tutorial-bot.html)
