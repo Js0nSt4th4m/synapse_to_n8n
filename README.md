@@ -14,11 +14,13 @@ Here is the data modele of n8n input :
 
 After clicking the 'use this template' button and cloning the repo, you'll need to install the dependencies to get started. This assumes you have at least NodeJS 14 or higher.
 
-    Run npm install to get the dependencies.
+    Run npm install 
+
+to get the dependencies.
 
 To build it: 
 
- 	npm run build.
+ 	npm run build
 
 To run it: 
 
@@ -30,7 +32,7 @@ To check the lint:
 
 To build the Docker image: 
 
-	docker build -t your-bot:latest .
+	docker build -t your-bot:latest
 
 To run the Docker image (after building): 
 
