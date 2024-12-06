@@ -14,8 +14,6 @@ Here is the data modele of n8n input :
 
 After clicking the 'use this template' button and cloning the repo, you'll need to install the dependencies to get started. This assumes you have at least NodeJS 14 or higher.
 
-    Replace this README with something useful.
-    Update your project's details in package.json.
     Run npm install to get the dependencies.
 
 To build it: npm run build.
